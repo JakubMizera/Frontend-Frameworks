@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from '../App';
-import { Menu } from '../components/common/Menu';
-import { GlobalStyle } from '../style/global';
+import App from './components/common/App';
+import { Menu } from './components/common/Menu';
+import { GlobalStyle } from './style/global';
 
 
 
