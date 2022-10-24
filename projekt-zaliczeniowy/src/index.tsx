@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/common/App';
-import { Menu } from './components/common/Menu';
+import App from './App';
+
 import { GlobalStyle } from './style/global';
 
 
@@ -11,8 +11,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.Fragment>
-    <GlobalStyle /> 
+    <GlobalStyle />
     <App />
-    <Menu />
   </React.Fragment>
 );

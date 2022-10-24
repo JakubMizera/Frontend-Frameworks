@@ -7,10 +7,11 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 16px;
     }
 
-    body {
-        background-color: #060604;
-        overflow: hidden;
+    * {
+        box-sizing: border-box;
     }
 
-    box-sizing: border-box;
+    body {
+        overflow: hidden;
+    }
 `
