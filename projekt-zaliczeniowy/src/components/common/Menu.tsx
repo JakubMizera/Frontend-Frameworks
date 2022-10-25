@@ -2,28 +2,25 @@ import { FC } from "react";
 
 import styled, { css } from "styled-components";
 
-const Wrapper = styled.div`
-    border: 10px solid black;
-`;
-
-//adding styling to already existing styling
-const SecondWrapper = styled(Wrapper)`
-    background: red;
-`;
-
-
-const ExampleDiv = styled.div<{ isActive: boolean }>`
-    background: yellow;
-    ${props => props.isActive && css`
-        background: blue;
-    `}
+const MenuWrapper = styled.ul`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #e7eaf6;
 `;
 
 
-export const Menu: FC = () => {
+interface IProps {
+    children: JSX.Element;
+};
+
+
+export const Menu: FC<IProps> = (props) => {
     return (
-        <ExampleDiv isActive={false}>
-            <h2>test</h2>
-        </ExampleDiv>
+        <MenuWrapper>
+            {props.children}
+        </MenuWrapper>
     );
 };

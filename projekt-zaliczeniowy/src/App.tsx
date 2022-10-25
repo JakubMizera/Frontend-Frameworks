@@ -1,5 +1,4 @@
-import React, { FC } from "react";
-import styled from "styled-components";
+import { FC } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import Comments from "./components/common/Routes/Comments/Comments";
@@ -8,25 +7,39 @@ import Photos from "./components/common/Routes/Photos/Photos";
 import Posts from "./components/common/Routes/Posts/Posts";
 import Profile from "./components/common/Routes/Profile/Profile";
 
+import { Menu } from "./components/common/Menu";
 import { Layout } from "./components/common/layout";
+import MenuLi from "./style/MenuLi";
 
 const App: FC = () => {
     return (
         <Router>
-            <div>
-                <Link to='/'>Home</Link>
-                <Link to='posts'>Posts</Link>
-                <Link to='profile'>Profile</Link>
-                <Link to='photos'>Photos</Link>
-                <Link to='comments'>Comments</Link>
-            </div>
+            <Menu>
+                <>
+                    <MenuLi>
+                        <Link to='/'>Home</Link>
+                    </MenuLi>
+                    <MenuLi>
+                        <Link to='posts'>Posts</Link>
+                    </MenuLi>
+                    <MenuLi>
+                        <Link to='profile'>Profile</Link>
+                    </MenuLi>
+                    <MenuLi>
+                        <Link to='photos'>Photos</Link>
+                    </MenuLi>
+                    <MenuLi>
+                        <Link to='comments'>Comments</Link>
+                    </MenuLi>   
+                </>
+            </Menu>
             <Layout>
                 <Routes>
+                    <Route index element={<Home />} />
                     <Route path="posts" element={<Posts />} />
                     <Route path="profile" element={<Profile />} />
                     <Route path="photos" element={<Photos />} />
                     <Route path="comments" element={<Comments />} />
-                    <Route index element={<Home />} />
                 </Routes>
             </Layout>
         </Router>

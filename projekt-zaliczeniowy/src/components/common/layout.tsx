@@ -8,8 +8,9 @@ const Wrapper = styled.div`
 
 
 const Content = styled.div`
-    width: 1024px;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: #a2a8d3;
 `;
 
 
